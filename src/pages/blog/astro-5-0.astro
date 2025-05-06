@@ -1,0 +1,37 @@
+---
+import BlogPost from "../../components/BlogPost.astro";
+
+const meta = {
+    title: "Novedades Astro 5.0",
+    date: "2024-12-03",
+    category: "Noticias",
+    image: "https://astro.build/_astro/blog-post-5.XHKep0ck_Z1CKhVh.webp",
+    categoryClass: "bg-sky-100 text-sky-800",
+};
+---
+
+<BlogPost {meta}>
+    <p class="text-xl mb-6">
+        Astro 5.0 trae mejoras significativas en rendimiento y usabilidad. En este artículo, exploraremos las novedades más destacadas.
+    </p>
+
+    <h2 class="text-3xl font-bold mt-8 mb-4">Mejoras de rendimiento</h2>
+    <div class="space-y-4">
+        <p>Astro 5.0 incluye optimizaciones que reducen el tiempo de carga y mejoran la experiencia del usuario.</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Compilación más rápida</li>
+            <li>Mejor manejo de imágenes</li>
+            <li>Optimización de CSS y JS</li>
+        </ul>
+    </div>
+
+    <h2 class="text-3xl font-bold mt-8 mb-4">Nuevas características</h2>
+    <div class="space-y-4">
+        <p>Algunas de las nuevas características incluyen:</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Soporte para nuevos componentes</li>
+            <li>Integración con herramientas populares</li>
+            <li>Mejoras en la documentación</li>
+        </ul>
+    </div>
+</BlogPost>

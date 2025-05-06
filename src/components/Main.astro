@@ -1,0 +1,76 @@
+---
+import ContactIcon from "../components/icons/Contact.astro";
+---
+
+<section class="min-h-screen flex items-center bg-transparent">
+  <div
+    class="flex flex-col md:flex-row gap-12 items-center w-full max-w-6xl mx-auto"
+  >
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
+        Hola, soy
+        <span
+          class="bg-gradient-to-r from-sky-500 to-blue-500 bg-clip-text text-transparent"
+        >
+          Ronaldo Jiménez
+        </span>
+      </h1>
+
+      <p class="text-lg text-gray-600 md:pr-8">
+        Desarrollador Full Stack apasionado por crear soluciones digitales
+        innovadoras. Con experiencia en el desarrollo de aplicaciones web y en la enseñanza.
+        Siempre en busca de nuevos desafíos y oportunidades para aprender.
+      </p>
+
+      <div class="flex flex-wrap gap-3 mt-4">
+        <span class="px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm"
+          >Go</span
+        >
+        <span class="px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm"
+          >Python</span
+        >
+        <span class="px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm"
+          >MongoDB</span
+        >
+        <span class="px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm"
+          >Astro</span
+        >
+      </div>
+
+      
+      <a
+        href="/contacto"
+        class="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-sky-600 hover:bg-sky-700 text-white transition-all duration-300
+         shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-medium
+         border border-transparent hover:border-fuchsia-800/20"
+      >
+        <ContactIcon class="size-5" />
+        Contáctame
+      </a>
+    </div>
+
+    <div class="md:w-1/2 relative">
+      <div class="relative z-10 w-full max-w-md">
+        <div
+          class="aspect-square rounded-2xl bg-gradient-to-tr from-sky-500 to-blue-400 overflow-hidden shadow-xl"
+        >
+          <img
+            src="/me.webp"
+            alt="Ronaldo Jiménez - Desarrollador Full Stack"
+            class="w-full h-full object-cover mix-blend-luminosity opacity-90"
+          />
+        </div>
+      </div>
+
+      {/* Efecto de fondo decorativo */}
+      <div
+        class="absolute -top-8 -right-8 w-64 h-64 bg-sky-300/30 rounded-full blur-3xl"
+      >
+      </div>
+      <div
+        class="absolute -bottom-8 -left-8 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"
+      >
+      </div>
+    </div>
+  </div>
+</section>

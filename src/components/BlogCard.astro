@@ -1,0 +1,70 @@
+---
+import LinkButton from "./LinkButton.astro";
+import DateTimeIcon from "./icons/DateTime.astro";
+import CategoryIcon from "./icons/Category.astro";  
+import Link from "./icons/Link.astro";
+
+const articles = [
+  {
+    title: "Programación en Go",
+    date: "2024-03-15",
+    category: "Tutoriales",
+    excerpt: "Guía completa para aprender a programar desde cero con Go.",
+    image: "https://github.com/JimcostDev/programming-in-go/raw/master/imgs/golang.webp",
+    slug: "curso-go"
+  },
+  {
+    title: "Introducción a Python",
+    date: "2024-03-10",
+    category: "Tecnología",
+    excerpt: "Fundamentos esenciales de programción en Python.",
+    image: "https://github.com/JimcostDev/python_programming_fundamentals/raw/master/imgs/curso-python.webp",
+    slug: "introduccion-py"
+  },
+  {
+    title: "Novedades Astro 5.0",
+    date: "2024-12-03",
+    category: "Noticias",
+    excerpt: "Astro 5.0 trae mejoras significativas en rendimiento y usabilidad.",
+    image: "https://astro.build/_astro/blog-post-5.XHKep0ck_Z1CKhVh.webp",
+    slug: "astro-5-0"
+  }
+];
+---
+
+<div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+  {articles.map(({ title, date, category, excerpt, image, slug }) => (
+    <article class="group relative flex flex-col rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300">
+      {/* Imagen del artículo */}
+      <div class="relative aspect-video overflow-hidden rounded-t-xl">
+        <img
+          src={image}
+          alt={title}
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+        {/* Overlay de categoría */}
+        <span class="absolute top-4 right-4 px-3 py-1 bg-sky-500/90 text-white text-sm rounded-full backdrop-blur-sm flex items-center gap-1">
+          <CategoryIcon class="w-4 h-4" />
+          {category}
+        </span>
+      </div>
+
+      {/* Contenido */}
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="flex items-center gap-2 text-gray-500 text-sm mb-3">
+          <DateTimeIcon class="w-4 h-4" />
+          <time datetime={date}>{new Date(date).toLocaleDateString('es-ES')}</time>
+        </div>
+        
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
+        <p class="text-gray-600 mb-4 flex-grow">{excerpt}</p>
+        <div class="absolute bottom-0 right-0 m-4">
+          <LinkButton target="_self" href={`/blog/${slug}`}>
+            <Link class="size-4" />
+          </LinkButton>
+        </div>
+      </div>
+    </article>
+  ))}
+</div>

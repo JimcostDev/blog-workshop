@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Title from "../components/TitleSection.astro";
+
+const { meta } = Astro.props;
+---
+
+<Layout title={meta.title}>
+  <SectionContainer id="blog">
+    <div class="flex items-center text-gray-500 mt-2 space-x-4">
+    <Title>{meta.title}</Title>
+      <time datetime={meta.date}>
+        {new Date(meta.date).toLocaleDateString("es-ES")}
+      </time>
+      <span class={`px-2 inline-block ${meta.categoryClass} rounded-full text-sm`}>
+        {meta.category}
+      </span>
+    </div>
+
+    <img
+      src={meta.image}
+      alt={meta.title}
+      class="w-full rounded-xl shadow-md mb-8"
+      loading="lazy"
+    />
+
+    <article class="prose max-w-none prose-lg text-gray-700">
+      <slot />
+    </article>
+  </SectionContainer>
+</Layout>

@@ -1,0 +1,93 @@
+---
+import BlogPost from "../../components/BlogPost.astro";
+
+const meta = {
+  title: "Programación en Go",
+  date: "2024-03-15",
+  category: "Tutoriales",
+  image:
+    "https://github.com/JimcostDev/programming-in-go/raw/master/imgs/golang.webp",
+  categoryClass: "bg-sky-100 text-sky-800",
+};
+---
+
+<BlogPost {meta}>
+  <p class="text-xl mb-6">
+    Go (o Golang) es un lenguaje de programación creado por Google que combina
+    la eficiencia de lenguajes compilados con la simplicidad de los lenguajes
+    interpretados. En este artículo exploraremos sus características
+    principales.
+  </p>
+
+  <h2 class="text-3xl font-bold mt-8 mb-4">¿Por qué Go?</h2>
+  <div class="space-y-4">
+    <p>Algunas ventajas clave de Go:</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Compilación rápida y ejecución eficiente</li>
+      <li>Sistema de concurrencia con goroutines y channels</li>
+      <li>Tipado estático con inferencia de tipos</li>
+      <li>Recolección de basura automática</li>
+      <li>Sintaxis minimalista y limpia</li>
+    </ul>
+  </div>
+
+  <h2 class="text-3xl font-bold mt-8 mb-4">Hola Mundo en Go</h2>
+  <pre
+    class="rounded-lg p-4 bg-gray-800 text-gray-100 mb-6 overflow-x-auto"><code class="language-go">{`package main
+  
+  import "fmt"
+  
+  func main() {
+      fmt.Println("¡Hola, mundo!")
+  }
+  `}</code></pre>
+
+  <h2 class="text-3xl font-bold mt-8 mb-4">Instalación</h2>
+  <div class="space-y-4">
+    <p>Pasos básicos para instalar Go:</p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li>
+        Descarga el instalador desde <a
+          href="https://golang.org/dl/"
+          class="text-sky-600 hover:underline">la página oficial</a
+        >
+      </li>
+      <li>Ejecuta el instalador</li>
+      <li>
+        Verifica la instalación con <code class="bg-gray-100 px-2 py-1 rounded"
+          >go version</code
+        >
+      </li>
+      <li>
+        Configura tu entorno de desarrollo (VS Code con Go extension es una
+        excelente opción)
+      </li>
+    </ol>
+  </div>
+
+  <h2 class="text-3xl font-bold mt-8 mb-4">Características Principales</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">Concurrencia</h3>
+      <p>
+        Goroutines y channels permiten manejar concurrencia de forma eficiente y
+        segura.
+      </p>
+    </div>
+    <div class="p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">Rendimiento</h3>
+      <p>Compilación a código nativo y optimización para sistemas modernos.</p>
+    </div>
+    <div class="p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">Simplicidad</h3>
+      <p>Sintaxis clara y minimalista con solo 25 palabras reservadas.</p>
+    </div>
+  </div>
+
+  <div class="bg-sky-50 p-6 rounded-xl mt-8">
+    <h3 class="text-2xl font-semibold mb-3">💡 ¿Sabías que?</h3>
+    <p class="mb-0">
+      Grandes proyectos como Docker, Kubernetes y Terraform usan Go.
+    </p>
+  </div>
+</BlogPost>

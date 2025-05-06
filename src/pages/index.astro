@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Main from '../components/Main.astro'
+import Projects from '../components/Projects.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Title from "../components/TitleSection.astro"
+import BlogCard from "../components/BlogCard.astro"
+---
+
+<Layout title="Ronaldo Jiménez">
+	<SectionContainer id="principal">
+		<Main/>
+	</SectionContainer>
+
+	<SectionContainer id="blog">
+		<Title>Blog</Title>
+		<BlogCard/> 
+	</SectionContainer>
+	
+	<SectionContainer id="proyectos">
+		<Title>Proyectos</Title>
+		<Projects/>
+	</SectionContainer>
+</Layout>
+
+
